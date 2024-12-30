@@ -25,9 +25,9 @@ class PmdProcessorTest extends TestEnvironment {
 
         assertThat(reviewResult.getViolations())
                 .isNotEmpty()
-                .hasSize(4)
+                .hasSize(5)
                 .extracting("message")
-                .contains("All classes and interfaces must belong to a named package")
+                .contains("All classes, interfaces, enums and annotations must belong to a named package")
                 .contains("Each class should declare at least one constructor");
     }
 

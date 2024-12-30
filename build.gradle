@@ -84,7 +84,7 @@ dependencies {
     }
 
     // PMD dependencies
-    implementation('net.sourceforge.pmd:pmd-java:6.0.0') {
+    implementation('net.sourceforge.pmd:pmd-java:7.8.0') {
         exclude group: 'jaxen'
         exclude group: 'xerces'
         exclude group: 'junit'
@@ -102,8 +102,9 @@ dependencies {
     }
 
     // SpotBugs dependencies
-    implementation('com.github.spotbugs:spotbugs:4.2.0') {
+    implementation('com.github.spotbugs:spotbugs:4.8.6') {
         exclude group: 'org.slf4j'
+        exclude group: 'ch.qos.logback'
     }
 
     // Scalastyle http://www.scalastyle.org/
