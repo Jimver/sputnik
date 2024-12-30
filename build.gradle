@@ -37,8 +37,8 @@ configurations {
 
 project.version = findProperty("version") ?: scmVersion.version
 
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
+sourceCompatibility = 11
+targetCompatibility = 11
 group = 'pl.touk'
 mainClassName = 'pl.touk.sputnik.Main'
 
@@ -79,7 +79,7 @@ dependencies {
     implementation 'com.urswolfer.gerrit.client.rest:gerrit-rest-java-client:0.9.3'
 
     // Checkstyle dependencies
-    implementation('com.puppycrawl.tools:checkstyle:8.1') {
+    implementation('com.puppycrawl.tools:checkstyle:10.21.1') {
         exclude group: 'com.google.guava'
     }
 
@@ -110,12 +110,11 @@ dependencies {
     implementation 'org.scalastyle:scalastyle_2.10:0.4.0'
 
     // CodeNarc http://codenarc.sourceforge.net/
-    implementation('org.codenarc:CodeNarc:1.4') {
+    implementation('org.codenarc:CodeNarc:3.5.0') {
         exclude module: 'groovy'
         exclude group: 'junit'
     }
-
-    implementation 'org.codehaus.groovy:groovy:2.3.4'
+    implementation 'org.codehaus.groovy:groovy:3.0.9' // 3.0.9 in CodeNarc
 
     // JSLint
     implementation 'com.googlecode.jslint4java:jslint4java:2.0.5'

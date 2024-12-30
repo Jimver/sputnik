@@ -1,4 +1,4 @@
-class TestFile {
+public class TestFile {
     public String foo() {
         return "bar";
     }

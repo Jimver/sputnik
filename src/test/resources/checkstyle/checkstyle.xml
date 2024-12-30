@@ -9,9 +9,8 @@
     <module name="TreeWalker">
         <!-- Javadoc Comments -->
         <module name="AtclauseOrder"/>
-        <module name="JavadocMethod">
-            <property name="allowUndeclaredRTE" value="true"/>
-            <property name="allowThrowsTagsForSubclasses" value="true"/>
+        <module name="JavadocMethod"/>
+        <module name="MissingJavadocMethod">
             <property name="allowMissingPropertyJavadoc" value="true"/>
         </module>
         <module name="JavadocParagraph"/>
@@ -24,6 +23,7 @@
             <!-- avoid errors on tag '@noinspection' -->
             <property name="allowUnknownTags" value="true"/>
         </module>
+        <module name="MissingJavadocType"/>
         <module name="JavadocVariable"/>
         <module name="NonEmptyAtclauseDescription"/>
         <module name="SingleLineJavadoc"/>
